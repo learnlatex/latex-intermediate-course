@@ -50,7 +50,52 @@
 
 \section{Mathematics with AMSMath}
 
-\section{Font selection using \XeTeX{} and \LuaTeX{}}
+\section{Font selection}
+
+\begin{frame}[fragile]{Font selection}
+
+  \begin{block}{\enquote{Classical}}
+    \begin{verbatim}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{inconsolata}
+    \end{verbatim}
+  \end{block}
+
+  \vspace{-\baselineskip}
+  \begin{block}<2->{\XeTeX{} and \LuaTeX{}}
+    \begin{verbatim}
+\usepackage{fontspec}
+\setmainfont{Latin Modern}
+\setsansfont{Latin Modern Sans}
+\setmonofont[Scale = MatchLowercase]
+  {Inconsolata}
+    \end{verbatim}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]{Unicode mathematics}
+
+  \begin{itemize}
+    \item Math fonts are very complex
+    \item There are now several Unicode math fonts:\\
+      Cambria Math, XITS, Latin Modern Math, \ldots 
+    \item Good demo of glyph coverage:\\
+      \texttt{texdoc unimath-symbols}
+  \end{itemize}
+  
+  \begin{block}<2->{Matching fonts}
+    \begin{verbatim}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont{texgyrepagella-math.otf}
+    \end{verbatim}
+  \end{block}
+
+\end{frame}
+
 
 \section{Ti\protect\emph{k}z: drawing in \LaTeX{}}
 
